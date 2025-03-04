@@ -33,28 +33,21 @@ function App() {
             className="w-full py-2 text-left text-gray-700 ml-4"
             onClick={() => setActiveSection("officialsports")}
           >
-            OfficialSports
+            OfficialSports (August 2024 - Present)
           </button>
           <p className="text-sm py-2 text-gray-700 font-bold">Machine Learning</p>
           <button
             className="w-full py-2 text-left text-gray-700 ml-4"
             onClick={() => setActiveSection("baseballstrikeprediction")}
           >
-            Baseball Strike Prediction
-          </button>
-          <p className="text-sm py-2 text-gray-700 font-bold">Video Games</p>
-          <button
-            className="w-full py-2 text-left text-gray-700 ml-4"
-            onClick={() => setActiveSection("dungeoncrawler")}
-          >
-            Dungeon Crawler
+            Baseball Strike Prediction (May 2024 - August 2024)
           </button>
           <p className="text-sm py-2 text-gray-700 font-bold">Web Development</p>
           <button
             className="w-full py-2 text-left text-gray-700 ml-4"
-            onClick={() => setActiveSection("dungeoncrawler")}
+            onClick={() => setActiveSection("portfoliowebsite")}
           >
-            Portfoilio Website
+            Portfolio Website (February 2025 - Present)
           </button>
         </div>
         <div>
@@ -151,28 +144,106 @@ function App() {
                 <img src={process.env.PUBLIC_URL + "/nodejs.png"} alt="Tech 3" className="w-32 h-32 mb-4" />
               </div>
             </div>
-            <iframe
-              src={process.env.PUBLIC_URL + '/officialsports.pdf'}
-              className="w-full h-64 border mt-4"
-              title="OfficialSports PDF"
-            ></iframe>
           </div>
         )}
         {activeSection === "baseballstrikeprediction" && (
           <div>
-            <div className='flex'>
-              <div className='w-1/2'>
-                <p>Baseball Strike Prediction Project Details...</p>
+            <div className="flex">
+              <div className="w-1/2">
+                <h2 className="text-4xl font-bold">Pitch Type Prediction Using Machine Learning</h2>
+                <h3 className="text-2xl font-bold">Overview</h3>
+                <p className="mt-4">This project explores the use of machine learning models to predict the type of pitch thrown in baseball based on pitch data. By analyzing various factors such as pitch speed, spin rate, and release angle, we aimed to determine which machine learning algorithms could most accurately classify different pitch types.</p>
+                <h3 className="text-2xl font-bold">Approach & Methodology</h3>
+                <ul className="list-disc mt-4">
+                  <li><strong>Data Collection & Preprocessing</strong>
+                    <ul className="list-disc list-inside">
+                      <li>Gathered pitch data containing key metrics such as velocity, spin rate, release angle, and movement.</li>
+                      <li>Cleaned and preprocessed the data using Pandas, handling missing values and standardizing features.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Model Selection & Training</strong>
+                    <ul className="list-disc list-inside pl-4">
+                      <li>Implemented and compared three machine learning models:
+                        <ul className="list-disc list-inside pl-4">
+                          <li><strong>Linear Regression</strong> (for understanding linear relationships between pitch characteristics)</li>
+                          <li><strong>Support Vector Machine (SVM)</strong> (for improved classification in non-linear datasets)</li>
+                          <li><strong>Random Forest</strong> (for handling feature importance and non-linear decision boundaries)</li>
+                        </ul>
+                      </li>
+                      <li>Integrated Google Cloud Storage API for secure and scalable media storage.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Model Evaluation & Insights</strong>
+                    <ul className="list-disc list-inside">
+                      <li>Assessed model performance using metrics like accuracy, precision, recall, and F1-score.</li>
+                      <li>Identified key features that influenced prediction accuracy the most.</li>
+                      <li>Documented the results using Jupyter Notebooks for reproducibility and visualization.</li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
-              <div className='w-1/2'>
-                <img src={process.env.PUBLIC_URL + '/baseball.jpg'} alt="Baseball" className="w-64 h-64 rounded-full" />
+              <div className="w-1/2">
+                <img src={process.env.PUBLIC_URL + "/pythonpic.png"} alt="Tech 1" className="w-32 h-32 mb-4" />
+                <img src={process.env.PUBLIC_URL + "/scikitlearn.png"} alt="Tech 2" className="w-40 h-32 mb-4" />
               </div>
             </div>
           </div>
         )}
-        {activeSection === "dungeoncrawler" && (
+        {activeSection === "portfoliowebsite" && (
           <div>
-            <p>Dungeon Crawler Project Details...</p>
+            <div className="flex">
+              <div className="w-1/2">
+                <h2 className="text-4xl font-bold">Personal Portfolio Website</h2>
+                <h3 className="text-2xl font-bold">Overview</h3>
+                <p className="mt-4">This project is a personal portfolio website designed to showcase my projects, skills, and experience as a software developer. Built using React.js and Tailwind CSS, the website provides a modern, responsive, and interactive interface that highlights my work in full-stack development, machine learning, and web development.</p>
+                <h3 className="text-2xl font-bold">Approach & Features</h3>
+                <ul className="list-disc mt-4">
+                  <li><strong>React.js for a Dynamic UI</strong>
+                    <ul className="list-disc list-inside">
+                      <li>Built the website using React.js to create a fast, interactive, and component-based architecture.</li>
+                      <li>Implemented a single-page application (SPA) design for seamless navigation between sections.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Tailwind CSS for Modern Styling</strong>
+                    <ul className="list-disc list-inside pl-4">
+                      <li>Used Tailwind CSS to create a clean, responsive, and visually appealing design with minimal effort.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Sidebar Navigation & Section Toggles</strong>
+                    <ul className="list-disc list-inside pl-4">
+                      <li>Designed a sidebar menu for easy access to different sections:
+                        <ul className="list-disc list-inside pl-4">
+                          <li><strong>"About Me"</strong> – A brief introduction and background.</li>
+                          <li><strong>"Projects"</strong> – A showcase of my technical work, categorized by Full Stack Development, Machine Learning, and Web Development.</li>
+                          <li><strong>"Resume"</strong> – An embedded PDF of my latest resume.</li>
+                          <li><strong>"Contact"</strong> – Links to my email, LinkedIn, and GitHub.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><strong>Interactive Animations & Transitions</strong>
+                    <ul className="list-disc list-inside">
+                      <li>Added smooth animations for UI elements to enhance user experience.</li>
+                      <li>Used state management to toggle content dynamically without reloading the page.</li>
+                    </ul>
+                  </li>
+                </ul>
+                <div className="mt-4">
+                  <a
+                    href="https://github.com/jerolync/my-portfolio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 underline"
+                  >
+                    View Portfolio Repository
+                  </a>
+                </div>
+              </div>
+              <div className="w-1/2">
+                <img src={process.env.PUBLIC_URL + "/logo192.png"} alt="Tech 1" className="w-32 h-32 mb-4" />
+                <img src={process.env.PUBLIC_URL + "/tailwindcss.svg"} alt="Tech 2" className="w-40 h-32 mb-4" />
+              </div>
+            </div>
           </div>
         )}
       </motion.div>
