@@ -27,7 +27,7 @@ function App() {
             Resume
           </button>
           <hr className="my-4 border-gray-300" />
-          <p className="uppercase text-left font-bold">Projects</p>
+          <p className="uppercase text-gray-700 text-left font-bold">Projects</p>
           <p className="text-sm py-2 text-gray-700 font-bold">Full Stack Development</p>
           <button
             className="w-full py-2 text-left text-gray-700 ml-4"
@@ -48,6 +48,13 @@ function App() {
             onClick={() => setActiveSection("dungeoncrawler")}
           >
             Dungeon Crawler
+          </button>
+          <p className="text-sm py-2 text-gray-700 font-bold">Web Development</p>
+          <button
+            className="w-full py-2 text-left text-gray-700 ml-4"
+            onClick={() => setActiveSection("dungeoncrawler")}
+          >
+            Portfoilio Website
           </button>
         </div>
         <div>
@@ -103,29 +110,64 @@ function App() {
             title="Resume"
           ></iframe>
         )}
-        {activeSection === "fullstack" && (
-          <div>
-            <p>Full Stack Development Projects:</p>
-          </div>
-        )}
         {activeSection === "officialsports" && (
           <div>
-            <p>OfficialSports Project Details...</p>
-          </div>
-        )}
-        {activeSection === "machinelearning" && (
-          <div>
-            <p>Machine Learning Projects:</p>
+            <div className="flex">
+              <div className="w-1/2">
+                <h2 className="text-4xl font-bold">OfficialSports</h2>
+                <h3 className="text-2xl font-bold">Overview</h3>
+                <p className="mt-4">OfficialSports is a cross-platform social media application designed to help users find sports venues and connect with like-minded players. Built using the MERN stack (MongoDB, Express, React, Node.js), the app provides an interactive platform where users can discover nearby courts, chat in real time, share media, and even live stream games.</p>
+                <h3 className="text-2xl font-bold">My Contributions</h3>
+                <ul className="list-disc mt-4">
+                  <li><strong>Real-Time Messaging (WebSockets - Socket.io)</strong>
+                    <ul className="list-disc list-inside">
+                      <li>Implemented a real-time chat system using Socket.io, allowing users to send and receive messages instantly.</li>
+                      <li>Ensured messages persist in MongoDB to maintain conversation history.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Media Upload (Google Cloud Storage)</strong>
+                    <ul className="list-disc list-inside">
+                      <li>Developed a feature that allows users to upload images and videos of sports venues and events.</li>
+                      <li>Integrated Google Cloud Storage API for secure and scalable media storage.</li>
+                    </ul>
+                  </li>
+                  <li><strong>User Authentication & Login System</strong>
+                    <ul className="list-disc list-inside">
+                      <li>Implemented secure user authentication using JWT (JSON Web Tokens) to handle login and session management.</li>
+                      <li>Ensured cross-platform compatibility across web and mobile devices.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Live Streaming (AWS)</strong>
+                    <ul className="list-disc list-inside">
+                      <li>Integrated AWS Media Services to enable users to live stream games and events directly from their devices.</li>
+                      <li>Ensured smooth streaming performance and scalability.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div className="w-1/2">
+                <img src={process.env.PUBLIC_URL + "/logo192.png"} alt="Tech 1" className="w-32 h-32 mb-4" />
+                <img src={process.env.PUBLIC_URL + "/mongodb.png"} alt="Tech 2" className="w-32 h-32 mb-4" />
+                <img src={process.env.PUBLIC_URL + "/nodejs.png"} alt="Tech 3" className="w-32 h-32 mb-4" />
+              </div>
+            </div>
+            <iframe
+              src={process.env.PUBLIC_URL + '/officialsports.pdf'}
+              className="w-full h-64 border mt-4"
+              title="OfficialSports PDF"
+            ></iframe>
           </div>
         )}
         {activeSection === "baseballstrikeprediction" && (
           <div>
-            <p>Baseball Strike Prediction Project Details...</p>
-          </div>
-        )}
-        {activeSection === "videogames" && (
-          <div>
-            <p>Video Game Projects:</p>
+            <div className='flex'>
+              <div className='w-1/2'>
+                <p>Baseball Strike Prediction Project Details...</p>
+              </div>
+              <div className='w-1/2'>
+                <img src={process.env.PUBLIC_URL + '/baseball.jpg'} alt="Baseball" className="w-64 h-64 rounded-full" />
+              </div>
+            </div>
           </div>
         )}
         {activeSection === "dungeoncrawler" && (
